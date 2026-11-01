@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "windfeather",
+  "version": "${version}",
+  "name": "Wind Feather",
+  "description": "Перо, которое подбрасывает вас в воздух.",
+  "authors": ["Me"],
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.windfeather.WindFeatherMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
