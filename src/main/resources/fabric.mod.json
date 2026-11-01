@@ -3,11 +3,12 @@
   "id": "windfeather",
   "version": "${version}",
   "name": "Wind Feather",
-  "description": "Перо, которое подбрасывает вас в воздух.",
+  "description": "Перо ветра, мультипрыжок и рывок.",
   "authors": ["Me"],
   "environment": "*",
   "entrypoints": {
-    "main": ["com.example.windfeather.WindFeatherMod"]
+    "main": ["com.example.windfeather.WindFeatherMod"],
+    "client": ["com.example.windfeather.WindFeatherClient"]
   },
   "depends": {
     "fabricloader": ">=0.15.0",
