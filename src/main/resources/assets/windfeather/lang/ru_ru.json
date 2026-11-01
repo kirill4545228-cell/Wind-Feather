@@ -1,3 +1,5 @@
 {
-  "item.windfeather.wind_feather": "Перо ветра"
+  "item.windfeather.wind_feather": "Перо ветра",
+  "key.windfeather.dash": "Рывок",
+  "key.categories.windfeather": "Перо ветра"
 }
