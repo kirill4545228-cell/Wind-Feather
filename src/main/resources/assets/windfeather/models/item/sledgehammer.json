@@ -1,9 +1,9 @@
 {
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "sledgehammer",
-		"particle": "sledgehammer"
+		"textures": {
+		"0": "windfeather:item/sledgehammer",
+		"particle": "windfeather:item/sledgehammer"
 	},
 	"elements": [
 		{
