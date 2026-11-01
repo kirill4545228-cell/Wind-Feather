@@ -52,7 +52,7 @@ public class WindFeatherMod implements ModInitializer {
                 .register(entries -> entries.add(WIND_FEATHER));
 
         registerCommands();
-                TreeAndVeinFeatures.register();
+        TreeAndVeinFeatures.register();
         SurvivalFeatures.register();
 
         ServerPlayNetworking.registerGlobalReceiver(AIR_JUMP_PACKET,
