@@ -36,6 +36,13 @@ public class WindFeatherMod implements ModInitializer {
     public static final Item WIND_FEATHER =
             new WindFeatherItem(new Item.Settings().maxCount(1));
 
+    public static final Item GRAVE_INGOT =
+            new Item(new Item.Settings());
+
+    public static final Item SLEDGEHAMMER =
+            new SledgehammerItem(SledgehammerMaterial.INSTANCE, 6, -3.4F,
+                    new Item.Settings().maxCount(1));
+
     private static final int DASH_COOLDOWN_TICKS = 40;
 
     // Всего прыжков (1 = выкл, 2 = двойной, ...)
@@ -48,12 +55,22 @@ public class WindFeatherMod implements ModInitializer {
     public void onInitialize() {
         Registry.register(Registries.ITEM,
                 new Identifier(MOD_ID, "wind_feather"), WIND_FEATHER);
+        Registry.register(Registries.ITEM,
+                new Identifier(MOD_ID, "grave_ingot"), GRAVE_INGOT);
+        Registry.register(Registries.ITEM,
+                new Identifier(MOD_ID, "sledgehammer"), SLEDGEHAMMER);
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS)
                 .register(entries -> entries.add(WIND_FEATHER));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+                .register(entries -> entries.add(GRAVE_INGOT));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+                .register(entries -> entries.add(SLEDGEHAMMER));
 
         registerCommands();
         TreeAndVeinFeatures.register();
         SurvivalFeatures.register();
+        UndeadDrops.register();
 
         ServerPlayNetworking.registerGlobalReceiver(AIR_JUMP_PACKET,
                 (server, player, handler, buf, sender) ->
