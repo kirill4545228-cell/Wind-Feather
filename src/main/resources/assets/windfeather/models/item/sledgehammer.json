@@ -1,6 +1,4 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "windfeather:item/sledgehammer"
-  }
+"textures": {
+  "0": "windfeather:item/sledgehammer",
+  "particle": "windfeather:item/sledgehammer"
 }
